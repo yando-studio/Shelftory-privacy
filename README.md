@@ -1,0 +1,1 @@
+# Shelftory-privacy
