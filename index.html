@@ -414,9 +414,9 @@
         통신하는지 실제 앱 동작을 기준으로 안내합니다.
       </p>
       <div class="dates" aria-label="방침 날짜">
-        <span>공고일 2026년 8월 24일</span>
+        <span>공고일 2026년 8월 28일</span>
         <span>시행일 2026년 8월 24일</span>
-        <span>최종 변경일 2026년 8월 25일</span>
+        <span>최종 변경일 2026년 8월 28일</span>
       </div>
     </header>
 
@@ -431,7 +431,7 @@
       </article>
       <article class="summary-card">
         <strong>외부 통신은 목적이 정해져 있습니다</strong>
-        <p>광고 표시를 위한 Google AdMob과, 제품명 조회를 위한 Open Food Facts를 사용합니다.</p>
+        <p>Google AdMob 광고, Open Food Facts 상품명 조회와 ML Kit 진단·사용 분석을 위한 통신이 있습니다. 인식에 사용하는 촬영 이미지는 외부로 전송하지 않습니다.</p>
       </article>
       <article class="summary-card">
         <strong>Android 백업은 기기 설정을 따릅니다</strong>
@@ -469,7 +469,7 @@
       <p>
         앱은 회원가입 기능과 개발자가 운영하는 사용자 데이터 서버가 없습니다. 개발자는 사용자의
         기기에 저장된 재고·제품·메모를 원격으로 열람할 수 없습니다. 다만 광고, 외부 상품명 조회,
-        Android 운영체제의 백업 기능을 이용하는 경우에는 이 방침에 적힌 범위에서 외부 사업자가
+        ML Kit의 진단·사용 분석과 Android 운영체제의 백업 기능에 따라 이 방침에 적힌 범위에서 외부 사업자가
         정보를 처리할 수 있습니다.
       </p>
     </section>
@@ -529,6 +529,33 @@
     <section class="section" id="network">
       <span class="section-number">03</span>
       <h2>외부 통신과 자동 수집</h2>
+
+      <article class="provider">
+        <span class="pill">기기 내 인식</span>
+        <span class="pill">기술정보 자동 수집</span>
+        <h3>Google ML Kit 및 Google Play 서비스</h3>
+        <p>
+          영수증·바코드 인식에는 Google Play 서비스와 ML Kit를 사용하며, 인식은 기기 안에서
+          처리됩니다. <strong>촬영한 이미지는 외부로 전송되지 않습니다.</strong>
+          다만 ML Kit는 자체 진단 및 사용 분석을 위해 기기 정보(제조사·모델·운영체제),
+          앱 패키지명과 버전, 식별자, 처리 시간 등 성능 정보와 오류 정보를 Google에 전송합니다.
+          이 정보는 <strong>재고 내용이나 촬영한 이미지 자체가 포함되지 않는 기술정보</strong>입니다.
+        </p>
+        <p>
+          기술정보에는 이미지 형식·해상도 등의 API 설정, 입력·출력 크기, 기능 버전,
+          기능 초기화·모델 다운로드·인식 등 실행 이벤트 정보도 포함됩니다.
+          ML Kit는 입력 이미지와 인식 결과 자체를 Google 서버로 보내지 않으며,
+          기술정보는 HTTPS로 암호화되어 전송됩니다.
+          바코드 번호를 이용한 외부 상품명 조회는 아래 Open Food Facts 안내에 따릅니다.
+        </p>
+        <p>
+          자세한 내용은
+          <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">ML Kit 데이터 수집 안내</a>와
+          <a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer">ML Kit 약관 및 개인정보 안내</a>를
+          확인해 주세요. Google의 정보 처리와 보유·이용기간에는
+          <a href="https://policies.google.com/privacy?hl=ko" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a>이 적용됩니다.
+        </p>
+      </article>
 
       <article class="provider">
         <span class="pill">광고</span>
@@ -646,8 +673,8 @@
         맡기지 않습니다.
       </p>
       <p>
-        다만 앱에 설치된 Google Mobile Ads SDK가 제3자 수집도구로서 제3조의 광고 관련 정보를
-        Google에 전송하고, 외부 상품명 조회를 사용하면 Open Food Facts가 바코드 번호와 접속정보를
+        다만 Google Mobile Ads SDK는 제3조의 광고 관련 정보를, ML Kit는 제3조의 진단·사용 분석용
+        기술정보를 Google에 전송합니다. 외부 상품명 조회를 사용하면 Open Food Facts가 바코드 번호와 접속정보를
         처리합니다. Android 자동 백업을 사용자가 켠 경우에는 제4조에 따라 Google이 앱 데이터를
         백업합니다. 각 사업자의 처리에는 해당 사업자의 개인정보처리방침이 함께 적용됩니다.
       </p>
@@ -743,8 +770,8 @@
             </tr>
             <tr>
               <td>인터넷</td>
-              <td>AdMob 광고와 Open Food Facts 상품명 조회</td>
-              <td>네트워크가 없어도 기본 재고 관리와 내장 국내 상품 카탈로그는 사용할 수 있으나 광고·외부 상품명 조회는 제한됩니다.</td>
+              <td>AdMob 광고, Open Food Facts 상품명 조회 및 Google Play 서비스·ML Kit의 필요한 구성요소 다운로드와 진단·사용 분석 통신</td>
+              <td>네트워크가 없어도 기본 재고 관리와 내장 국내 상품 카탈로그는 사용할 수 있으나 광고·외부 상품명 조회는 제한됩니다. 인식에 필요한 구성요소가 기기에 없으면 최초 다운로드에 네트워크가 필요할 수 있습니다.</td>
             </tr>
           </tbody>
         </table>
@@ -788,7 +815,7 @@
       <h2>안전성 확보조치</h2>
       <ul>
         <li>사용자 데이터를 개발자 서버로 모으지 않고 Android의 앱 전용 저장 공간에 보관합니다.</li>
-        <li>외부 상품명 조회와 광고 통신은 HTTPS/TLS를 사용합니다.</li>
+        <li>외부 상품명 조회, 광고 통신과 ML Kit 기술정보 전송은 HTTPS/TLS를 사용합니다.</li>
         <li>영수증·거래명세서 문자 인식과 알림 예약은 기기에서 처리합니다.</li>
         <li>Android 자동 백업은 전송 중 암호화되며, 지원되는 기기에서는 화면 잠금으로 추가 보호됩니다.</li>
         <li>앱에 포함된 읽기 전용 국내 상품 카탈로그는 Android 자동 백업에서 제외합니다.</li>
@@ -839,6 +866,7 @@
       <details>
         <summary>변경 이력</summary>
         <ul>
+          <li>2026년 8월 28일: 제3조에 ML Kit의 기기 내 인식 및 진단·사용 분석용 기술정보 전송 고지 추가, 관련 외부 통신 안내 보완</li>
           <li>2026년 8월 25일: 개인정보 문의 이메일 변경</li>
           <li>2026년 8월 24일: 최초 제정</li>
         </ul>
